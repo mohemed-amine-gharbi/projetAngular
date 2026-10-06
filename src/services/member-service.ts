@@ -29,4 +29,14 @@ export class MemberService {
   editMember(id: String, m: MemberModel) {
     return this.http.put<void>(`http://localhost:3000/members/${id}`, m);
   }
+  getMemberById(id: String) {
+    return this.http.get<MemberModel>(`http://localhost:3000/members/${id}`);
+  }
+  updateMember(id: String, m: MemberModel) {
+    return this.http.put<void>(`http://localhost:3000/members/${id}`, m);
+  }
+  updateMember2 (id: String, newname: String) {
+    return this.http.patch<void>(`http://localhost:3000/members/${id}`, { name: newname });
+    
+  }
 }
