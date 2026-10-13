@@ -1,1 +1,49 @@
-<p>dashboard works!</p>
+<div class="cards-container">
+
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Nb Members</mat-card-title>
+        <mat-card-subtitle>{{Nb_Members}}</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Nb Articles</mat-card-title>
+        <mat-card-subtitle>{{Nb_Articles}}</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Nb Tools</mat-card-title>
+        <mat-card-subtitle>{{Nb_Tools}}</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Nb Events</mat-card-title>
+        <mat-card-subtitle>{{Nb_Events}}</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+  </mat-card>
+
+</div>
+
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'pie'"
+    [datasets]="chartData" 
+    [labels]="chartLabels" 
+    [options]="chartOptions"
+    >
+  </canvas>
+</div>

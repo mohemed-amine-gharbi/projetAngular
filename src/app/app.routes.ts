@@ -8,6 +8,8 @@ import { Events } from './events/events';
 import { Login } from './login/login';
 
 export const routes: Routes = [
+
+    //AuthGard.ts fnct canactivate:[authgard]
     {
         path: 'login',
         component: Login

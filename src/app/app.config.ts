@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat';
 import { firebaseConfig } from './environment';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 
 
@@ -14,7 +15,8 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
-    importProvidersFrom(AngularFireModule.initializeApp(firebaseConfig))
+    importProvidersFrom(AngularFireModule.initializeApp(firebaseConfig)),
+    provideCharts(withDefaultRegisterables()),
     
   ]
 };

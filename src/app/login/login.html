@@ -1,9 +1,11 @@
-<p>login works!</p>
 <form (ngSubmit)="login()">
   <mat-form-field>
+    <p> Email </p>
     <input matInput type="email" name="email" [(ngModel)]="email">
   </mat-form-field>
+  <br>
    <mat-form-field>
+    <p> Password </p>
     <input matInput type="password" name="password"
      [(ngModel)]="password">
   </mat-form-field>
